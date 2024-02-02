@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "PoTfggZxzXwXEWtKdJWlY8V+xSA6fjmfd+cSO2PO36yiqi7NbI21ChKQyclnmaG1/SrRIB+86l8BuPtDN/ocKQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\flayo\\source\\repos\\MoroccoMicrosoftCommunity\\MoroccoMicrosoftCommunity.Api\\MoroccoMicrosoftCommunity.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\flayo\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.11\\microsoft.aspnetcore.openapi.7.0.11.nupkg.sha512",
+    "C:\\Users\\flayo\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\flayo\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\flayo\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "C:\\Users\\flayo\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\flayo\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\flayo\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
