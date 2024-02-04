@@ -30,11 +30,11 @@ namespace MoroccoMicrosoftCommunity.Infrastructure.Repositories
         public async Task DeleteById(int id)
         {
             var entity = await _dbSet.FindAsync(id);
-            if (entity != null)
-            {
-                throw new InvalidOperationException($"Entity with id {id} not found for deletion.");
+            //if (entity != null)
+            //{
+            //    throw new InvalidOperationException($"Entity with id {id} not found for deletion.");
 
-            }
+            //}
             _dbSet.Remove(entity);
             await _appdbContext.SaveChangesAsync();
         }

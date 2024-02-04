@@ -92,7 +92,59 @@ namespace MoroccoMicrosoftCommunity.Api.Controllers
         }
 
 
-       
+        //[HttpDelete("{eventId}")]
+        //[ProducesResponseType(204)]
+        //[ProducesResponseType(404)]
+        //[ProducesResponseType(400)]
+        //////public async Task<IActionResult> DeleteEvent(int eventId)
+        //////{
+        //////    var eventEntity = await _eventRepo.GetById(eventId);
+
+        //////    if (eventEntity == null)
+        //////    {
+        //////        return NotFound(); // ou renvoyer un autre code d'erreur approprié
+        //////    }
+
+        //////    await _eventRepo.DeleteById(eventId);
+        //////    return NoContent();
+        //////}
+
+        //public async Task<IActionResult> DeleteEvent(int eventId)
+        //{
+        //    var result = await _eventRepo.DeleteById(eventId);
+        //    return Ok(result);
+        //}
+
+        [HttpDelete("{eventId}")]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(404)]
+        [ProducesResponseType(400)]
+        public async Task<IActionResult> DeleteEvent(int eventId)
+        {
+            try
+            {
+                // Vérifier si l'événement existe
+                var eventEntity = await _eventRepo.GetById(eventId);
+
+                if (eventEntity == null)
+                {
+                    return NotFound();
+                }
+
+                // Vérifier et supprimer les références dans d'autres tables si nécessaire
+                // Assurez-vous de gérer correctement les contraintes de clé étrangère
+
+                // Supprimer l'événement
+                await _eventRepo.DeleteById(eventId);
+
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Erreur lors de la suppression de l'événement avec l'ID {eventId}: {ex.ToString()}");
+                return StatusCode(500, "Une erreur interne est survenue lors de la suppression.");
+            }
+        }
 
 
     }
