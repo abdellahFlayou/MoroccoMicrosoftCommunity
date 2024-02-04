@@ -12,8 +12,15 @@ namespace MoroccoMicrosoftCommunity.Infrastructure.Repositories
 {
     public class EventRepo : GenericRepository<Evenement>, IEventRepo
     {
+        private AppDBContext _dbContext;
         public EventRepo(AppDBContext appdbContext) : base(appdbContext)
         {
+            _dbContext = appdbContext;
+        }
+        public bool Save()
+        {
+            var saved = _dbContext.SaveChanges();
+            return saved > 0 ? true : false;
         }
     }
 }

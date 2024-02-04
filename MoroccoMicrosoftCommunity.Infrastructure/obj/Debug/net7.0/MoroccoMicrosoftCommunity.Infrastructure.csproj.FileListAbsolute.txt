@@ -9,3 +9,9 @@ C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Infrastructure\obj
 C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Infrastructure\obj\Debug\net7.0\refint\MoroccoMicrosoftCommunity.Infrastructure.dll
 C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Infrastructure\obj\Debug\net7.0\MoroccoMicrosoftCommunity.Infrastructure.pdb
 C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Infrastructure\obj\Debug\net7.0\ref\MoroccoMicrosoftCommunity.Infrastructure.dll
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Infrastructure\bin\Debug\net7.0\MoroccoMicrosoftCommunity.Application.dll
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Infrastructure\bin\Debug\net7.0\MoroccoMicrosoftCommunity.Domain.dll
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Infrastructure\bin\Debug\net7.0\MoroccoMicrosoftCommunity.Application.pdb
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Infrastructure\bin\Debug\net7.0\MoroccoMicrosoftCommunity.Domain.pdb
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Infrastructure\obj\Debug\net7.0\MoroccoMicrosoftCommunity.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Infrastructure\obj\Debug\net7.0\MoroccoMicrosoftCommunity.Infrastructure.csproj.CopyComplete

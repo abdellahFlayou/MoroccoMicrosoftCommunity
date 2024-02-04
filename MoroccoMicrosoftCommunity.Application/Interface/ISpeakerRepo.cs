@@ -9,5 +9,6 @@ namespace MoroccoMicrosoftCommunity.Application.Interface
 {
     public interface ISpeakerRepo : IGenericRepo<Speaker>
     {
+        bool Save();
     }
 }

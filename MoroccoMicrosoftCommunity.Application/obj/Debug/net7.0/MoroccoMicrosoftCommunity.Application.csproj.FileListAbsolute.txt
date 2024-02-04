@@ -10,3 +10,6 @@ C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Application\obj\De
 C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Application\obj\Debug\net7.0\refint\MoroccoMicrosoftCommunity.Application.dll
 C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Application\obj\Debug\net7.0\MoroccoMicrosoftCommunity.Application.pdb
 C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Application\obj\Debug\net7.0\ref\MoroccoMicrosoftCommunity.Application.dll
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Application\bin\Debug\net7.0\MoroccoMicrosoftCommunity.Domain.dll
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Application\bin\Debug\net7.0\MoroccoMicrosoftCommunity.Domain.pdb
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Application\obj\Debug\net7.0\MoroccoMicrosoftCommunity.Application.csproj.CopyComplete

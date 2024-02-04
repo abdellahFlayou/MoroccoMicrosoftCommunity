@@ -107,3 +107,11 @@ C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Api\obj\Debug\net7
 C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Api\obj\Debug\net7.0\MoroccoMicrosoftCommunity.Api.csproj.CopyComplete
 C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Api\obj\Debug\net7.0\MoroccoMicrosoftCommunity.Api.genruntimeconfig.cache
 C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Api\obj\Debug\net7.0\ref\MoroccoMicrosoftCommunity.Api.dll
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Api\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Api\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Api\bin\Debug\net7.0\MoroccoMicrosoftCommunity.Application.dll
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Api\bin\Debug\net7.0\MoroccoMicrosoftCommunity.Domain.dll
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Api\bin\Debug\net7.0\MoroccoMicrosoftCommunity.Infrastructure.dll
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Api\bin\Debug\net7.0\MoroccoMicrosoftCommunity.Application.pdb
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Api\bin\Debug\net7.0\MoroccoMicrosoftCommunity.Domain.pdb
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Api\bin\Debug\net7.0\MoroccoMicrosoftCommunity.Infrastructure.pdb

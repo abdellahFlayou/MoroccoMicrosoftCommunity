@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using MoroccoMicrosoftCommunity.Application.Dtos;
+using MoroccoMicrosoftCommunity.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +13,7 @@ namespace MoroccoMicrosoftCommunity.Application.Mapping
     {
         public AutoMapperProfile()
         {
-           // CreateMap<>().ReverseMap();
+           CreateMap<Evenement , EventDto>().ReverseMap();
         }
 
     }

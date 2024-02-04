@@ -9,6 +9,6 @@ namespace MoroccoMicrosoftCommunity.Application.Interface
 {
     public interface ISponsorRepos :IGenericRepo<Sponsor>
     {
-
+        bool Save();
     }
 }

@@ -9,5 +9,6 @@ namespace MoroccoMicrosoftCommunity.Application.Interface
 {
     public interface ISessionRepo : IGenericRepo<Session>
     {
+        bool Save();
     }
 }

@@ -9,12 +9,12 @@
 //    {
 //        public SpeakerController()
 //        {
-            
+
 //        }
 //        [HttpGet]
-//        public async Task<ActionResult> () 
+//        public async Task<ActionResult>()
 //        {
-//            var resulta = await ;
+//            var resulta = await;
 //            return resulta;
 //        }
 //    }

@@ -9,5 +9,7 @@ namespace MoroccoMicrosoftCommunity.Application.Interface
 {
     public interface IPartnerRepository : IGenericRepo<Partenaire>
     {
+        bool Save();
     }
+
 }

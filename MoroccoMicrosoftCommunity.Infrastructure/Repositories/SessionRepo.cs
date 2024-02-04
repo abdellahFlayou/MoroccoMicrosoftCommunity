@@ -11,8 +11,15 @@ namespace MoroccoMicrosoftCommunity.Infrastructure.Repositories
 {
     public class SessionRepo : GenericRepository<Session>,ISessionRepo
     {
+        private AppDBContext _dbContext;
         public SessionRepo(AppDBContext appdbContext) : base(appdbContext)
         {
+            _dbContext = appdbContext;
+        }
+        public bool Save()
+        {
+            var saved = _dbContext.SaveChanges();
+            return saved > 0 ? true : false;
         }
     }
 }

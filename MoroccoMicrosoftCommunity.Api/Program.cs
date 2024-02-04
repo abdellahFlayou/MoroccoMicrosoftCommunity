@@ -1,12 +1,25 @@
+using Microsoft.EntityFrameworkCore;
+using MoroccoMicrosoftCommunity.Application.Interface;
+using MoroccoMicrosoftCommunity.Application.Mapping;
+using MoroccoMicrosoftCommunity.Infrastructure.Data;
+using MoroccoMicrosoftCommunity.Infrastructure.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddScoped<IEventRepo, EventRepo>();
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddDbContext<AppDBContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
