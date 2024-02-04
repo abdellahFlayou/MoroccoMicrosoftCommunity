@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\flayo\\source\\repos\\MoroccoMicrosoftCommunity\\MoroccoMicrosoftCommunity.Domain\\MoroccoMicrosoftCommunity.Domain.csproj": {}
+    "C:\\Users\\DELL\\OneDrive\\Bureau\\event\\MoroccoMicrosoftCommunity.Domain\\MoroccoMicrosoftCommunity.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\flayo\\source\\repos\\MoroccoMicrosoftCommunity\\MoroccoMicrosoftCommunity.Domain\\MoroccoMicrosoftCommunity.Domain.csproj": {
+    "C:\\Users\\DELL\\OneDrive\\Bureau\\event\\MoroccoMicrosoftCommunity.Domain\\MoroccoMicrosoftCommunity.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\flayo\\source\\repos\\MoroccoMicrosoftCommunity\\MoroccoMicrosoftCommunity.Domain\\MoroccoMicrosoftCommunity.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\OneDrive\\Bureau\\event\\MoroccoMicrosoftCommunity.Domain\\MoroccoMicrosoftCommunity.Domain.csproj",
         "projectName": "MoroccoMicrosoftCommunity.Domain",
-        "projectPath": "C:\\Users\\flayo\\source\\repos\\MoroccoMicrosoftCommunity\\MoroccoMicrosoftCommunity.Domain\\MoroccoMicrosoftCommunity.Domain.csproj",
-        "packagesPath": "C:\\Users\\flayo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\flayo\\source\\repos\\MoroccoMicrosoftCommunity\\MoroccoMicrosoftCommunity.Domain\\obj\\",
+        "projectPath": "C:\\Users\\DELL\\OneDrive\\Bureau\\event\\MoroccoMicrosoftCommunity.Domain\\MoroccoMicrosoftCommunity.Domain.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL\\OneDrive\\Bureau\\event\\MoroccoMicrosoftCommunity.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\flayo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +39,32 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.15, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -55,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

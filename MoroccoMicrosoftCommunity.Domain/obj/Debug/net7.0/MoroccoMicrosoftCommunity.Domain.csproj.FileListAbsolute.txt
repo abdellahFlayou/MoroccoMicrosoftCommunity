@@ -1,0 +1,14 @@
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Domain\bin\Debug\net7.0\MoroccoMicrosoftCommunity.Domain.deps.json
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Domain\bin\Debug\net7.0\MoroccoMicrosoftCommunity.Domain.runtimeconfig.json
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Domain\bin\Debug\net7.0\MoroccoMicrosoftCommunity.Domain.dll
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Domain\bin\Debug\net7.0\MoroccoMicrosoftCommunity.Domain.pdb
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Domain\obj\Debug\net7.0\MoroccoMicrosoftCommunity.Domain.csproj.AssemblyReference.cache
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Domain\obj\Debug\net7.0\MoroccoMicrosoftCommunity.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Domain\obj\Debug\net7.0\MoroccoMicrosoftCommunity.Domain.AssemblyInfoInputs.cache
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Domain\obj\Debug\net7.0\MoroccoMicrosoftCommunity.Domain.AssemblyInfo.cs
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Domain\obj\Debug\net7.0\MoroccoMicrosoftCommunity.Domain.csproj.CoreCompileInputs.cache
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Domain\obj\Debug\net7.0\MoroccoMicrosoftCommunity.Domain.dll
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Domain\obj\Debug\net7.0\refint\MoroccoMicrosoftCommunity.Domain.dll
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Domain\obj\Debug\net7.0\MoroccoMicrosoftCommunity.Domain.pdb
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Domain\obj\Debug\net7.0\MoroccoMicrosoftCommunity.Domain.genruntimeconfig.cache
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Domain\obj\Debug\net7.0\ref\MoroccoMicrosoftCommunity.Domain.dll

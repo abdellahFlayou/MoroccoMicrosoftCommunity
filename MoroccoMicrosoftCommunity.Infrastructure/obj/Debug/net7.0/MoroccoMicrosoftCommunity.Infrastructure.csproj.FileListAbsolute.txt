@@ -1,0 +1,11 @@
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Infrastructure\obj\Debug\net7.0\MoroccoMicrosoftCommunity.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Infrastructure\obj\Debug\net7.0\MoroccoMicrosoftCommunity.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Infrastructure\obj\Debug\net7.0\MoroccoMicrosoftCommunity.Infrastructure.AssemblyInfo.cs
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Infrastructure\obj\Debug\net7.0\MoroccoMicrosoftCommunity.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Infrastructure\bin\Debug\net7.0\MoroccoMicrosoftCommunity.Infrastructure.deps.json
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Infrastructure\bin\Debug\net7.0\MoroccoMicrosoftCommunity.Infrastructure.dll
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Infrastructure\bin\Debug\net7.0\MoroccoMicrosoftCommunity.Infrastructure.pdb
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Infrastructure\obj\Debug\net7.0\MoroccoMicrosoftCommunity.Infrastructure.dll
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Infrastructure\obj\Debug\net7.0\refint\MoroccoMicrosoftCommunity.Infrastructure.dll
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Infrastructure\obj\Debug\net7.0\MoroccoMicrosoftCommunity.Infrastructure.pdb
+C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Infrastructure\obj\Debug\net7.0\ref\MoroccoMicrosoftCommunity.Infrastructure.dll
