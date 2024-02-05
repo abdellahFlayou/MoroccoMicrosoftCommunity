@@ -26,25 +26,14 @@ namespace MoroccoMicrosoftCommunity.Api.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllSpeakers()
         {
-            try
-            {
-                var speakers = await _speakerRepo.GetAllAsync();
-
-                if(speakers == null || !speakers.Any()) {
-                    return NotFound();
-                }
-                var speakerDto = _mapper.Map<List<SpeakerDto>>(speakers);
-                return Ok(speakerDto);
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine($"Erreur lors de la récupération des sessions : {ex.ToString()}");
-                return StatusCode(500, "Une erreur interne est survenue lors de la récupération des sessions.");
-            }
+            var speakers = _mapper.Map<List<SpeakerDto>>(await _speakerRepo.GetAllAsync());
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            return Ok(speakers);
         }
 
         [HttpGet]
-        [Route("{id}")]
+        [Route("{speakerId}")]
         public async Task<IActionResult> GetSpeakerById(int speakerId)
         {
             try

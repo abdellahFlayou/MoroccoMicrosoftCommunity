@@ -12,7 +12,7 @@ namespace MoroccoMicrosoftCommunity.Infrastructure.Repositories
 {
     public class EventRepo : GenericRepository<Evenement>, IEventRepo
     {
-        private  readonly AppDBContext _dbContext;
+        private readonly AppDBContext _dbContext;
         public EventRepo(AppDBContext appdbContext) : base(appdbContext)
         {
             _dbContext = appdbContext;

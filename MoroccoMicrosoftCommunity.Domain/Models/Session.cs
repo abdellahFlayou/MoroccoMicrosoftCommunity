@@ -32,5 +32,4 @@ public partial class Session
     public virtual ICollection<Sponsor> Sponsors { get; set; } = new List<Sponsor>();
 
     public virtual Utilisateur? Utilisateur { get; set; }
-   
 }
