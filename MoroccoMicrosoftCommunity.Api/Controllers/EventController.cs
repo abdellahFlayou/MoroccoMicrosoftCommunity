@@ -17,8 +17,8 @@ namespace MoroccoMicrosoftCommunity.Api.Controllers
         {
             _eventRepo = eventRepo; 
             _mapper = mapper;
-            
         }
+
         [HttpGet]
         [ProducesResponseType(200, Type = typeof(IEnumerable<Evenement>))]
         public async Task <IActionResult> GetEvent()
@@ -28,6 +28,7 @@ namespace MoroccoMicrosoftCommunity.Api.Controllers
                 return BadRequest(ModelState);
             return Ok(evenements);
         }
+
         [HttpGet("{eventId}")]
         [ProducesResponseType(200, Type = typeof(Evenement))]
         [ProducesResponseType(400)]
@@ -39,7 +40,6 @@ namespace MoroccoMicrosoftCommunity.Api.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
             return Ok(evenement);
-
         }
     }
 }
