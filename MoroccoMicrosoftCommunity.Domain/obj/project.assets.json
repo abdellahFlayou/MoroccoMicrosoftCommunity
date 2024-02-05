@@ -2887,19 +2887,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DELL\\.nuget\\packages\\": {}
+    "C:\\Users\\flayo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DELL\\OneDrive\\Bureau\\event\\MoroccoMicrosoftCommunity.Domain\\MoroccoMicrosoftCommunity.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\flayo\\source\\repos\\MoroccoMicrosoftCommunity\\MoroccoMicrosoftCommunity.Domain\\MoroccoMicrosoftCommunity.Domain.csproj",
       "projectName": "MoroccoMicrosoftCommunity.Domain",
-      "projectPath": "C:\\Users\\DELL\\OneDrive\\Bureau\\event\\MoroccoMicrosoftCommunity.Domain\\MoroccoMicrosoftCommunity.Domain.csproj",
-      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DELL\\OneDrive\\Bureau\\event\\MoroccoMicrosoftCommunity.Domain\\obj\\",
+      "projectPath": "C:\\Users\\flayo\\source\\repos\\MoroccoMicrosoftCommunity\\MoroccoMicrosoftCommunity.Domain\\MoroccoMicrosoftCommunity.Domain.csproj",
+      "packagesPath": "C:\\Users\\flayo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\flayo\\source\\repos\\MoroccoMicrosoftCommunity\\MoroccoMicrosoftCommunity.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\flayo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2966,7 +2966,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

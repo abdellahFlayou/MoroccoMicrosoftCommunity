@@ -9,6 +9,7 @@ namespace MoroccoMicrosoftCommunity.Application.Interface
 {
     public interface IEventRepo : IGenericRepo<Evenement>
     {
+        
         bool Save();
 
     }

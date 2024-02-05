@@ -14,6 +14,6 @@ namespace MoroccoMicrosoftCommunity.Application.Interface
         Task Update(T entity);
         Task DeleteById(int id);
         Task<bool> IsExists(string? key, int? value);
-
+        Task<int> SaveChangesAsync();
     }
 }

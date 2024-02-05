@@ -30,11 +30,11 @@ namespace MoroccoMicrosoftCommunity.Infrastructure.Repositories
         public async Task DeleteById(int id)
         {
             var entity = await _dbSet.FindAsync(id);
-            if (entity != null)
-            {
-                throw new InvalidOperationException($"Entity with id {id} not found for deletion.");
+            //if (entity != null)
+            //{
+            //    throw new InvalidOperationException($"Entity with id {id} not found for deletion.");
 
-            }
+            //}
             _dbSet.Remove(entity);
             await _appdbContext.SaveChangesAsync();
         }
@@ -58,6 +58,7 @@ namespace MoroccoMicrosoftCommunity.Infrastructure.Repositories
             }
             return entity;
         }
+    
 
         public async Task<bool> IsExists(string? key, int? value)
         {
@@ -80,6 +81,10 @@ namespace MoroccoMicrosoftCommunity.Infrastructure.Repositories
             _dbSet.Update(entity);
             await _appdbContext.SaveChangesAsync();
 
+        }
+        public async Task<int> SaveChangesAsync()
+        {
+            return await _appdbContext.SaveChangesAsync();
         }
     }
 }

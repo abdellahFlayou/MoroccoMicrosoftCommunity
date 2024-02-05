@@ -12,3 +12,17 @@ C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Domain\obj\Debug\n
 C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Domain\obj\Debug\net7.0\MoroccoMicrosoftCommunity.Domain.pdb
 C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Domain\obj\Debug\net7.0\MoroccoMicrosoftCommunity.Domain.genruntimeconfig.cache
 C:\Users\DELL\OneDrive\Bureau\event\MoroccoMicrosoftCommunity.Domain\obj\Debug\net7.0\ref\MoroccoMicrosoftCommunity.Domain.dll
+C:\Users\flayo\source\repos\MoroccoMicrosoftCommunity\MoroccoMicrosoftCommunity.Domain\bin\Debug\net7.0\MoroccoMicrosoftCommunity.Domain.deps.json
+C:\Users\flayo\source\repos\MoroccoMicrosoftCommunity\MoroccoMicrosoftCommunity.Domain\bin\Debug\net7.0\MoroccoMicrosoftCommunity.Domain.runtimeconfig.json
+C:\Users\flayo\source\repos\MoroccoMicrosoftCommunity\MoroccoMicrosoftCommunity.Domain\bin\Debug\net7.0\MoroccoMicrosoftCommunity.Domain.dll
+C:\Users\flayo\source\repos\MoroccoMicrosoftCommunity\MoroccoMicrosoftCommunity.Domain\bin\Debug\net7.0\MoroccoMicrosoftCommunity.Domain.pdb
+C:\Users\flayo\source\repos\MoroccoMicrosoftCommunity\MoroccoMicrosoftCommunity.Domain\obj\Debug\net7.0\MoroccoMicrosoftCommunity.Domain.csproj.AssemblyReference.cache
+C:\Users\flayo\source\repos\MoroccoMicrosoftCommunity\MoroccoMicrosoftCommunity.Domain\obj\Debug\net7.0\MoroccoMicrosoftCommunity.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\flayo\source\repos\MoroccoMicrosoftCommunity\MoroccoMicrosoftCommunity.Domain\obj\Debug\net7.0\MoroccoMicrosoftCommunity.Domain.AssemblyInfoInputs.cache
+C:\Users\flayo\source\repos\MoroccoMicrosoftCommunity\MoroccoMicrosoftCommunity.Domain\obj\Debug\net7.0\MoroccoMicrosoftCommunity.Domain.AssemblyInfo.cs
+C:\Users\flayo\source\repos\MoroccoMicrosoftCommunity\MoroccoMicrosoftCommunity.Domain\obj\Debug\net7.0\MoroccoMicrosoftCommunity.Domain.csproj.CoreCompileInputs.cache
+C:\Users\flayo\source\repos\MoroccoMicrosoftCommunity\MoroccoMicrosoftCommunity.Domain\obj\Debug\net7.0\MoroccoMicrosoftCommunity.Domain.dll
+C:\Users\flayo\source\repos\MoroccoMicrosoftCommunity\MoroccoMicrosoftCommunity.Domain\obj\Debug\net7.0\refint\MoroccoMicrosoftCommunity.Domain.dll
+C:\Users\flayo\source\repos\MoroccoMicrosoftCommunity\MoroccoMicrosoftCommunity.Domain\obj\Debug\net7.0\MoroccoMicrosoftCommunity.Domain.pdb
+C:\Users\flayo\source\repos\MoroccoMicrosoftCommunity\MoroccoMicrosoftCommunity.Domain\obj\Debug\net7.0\MoroccoMicrosoftCommunity.Domain.genruntimeconfig.cache
+C:\Users\flayo\source\repos\MoroccoMicrosoftCommunity\MoroccoMicrosoftCommunity.Domain\obj\Debug\net7.0\ref\MoroccoMicrosoftCommunity.Domain.dll

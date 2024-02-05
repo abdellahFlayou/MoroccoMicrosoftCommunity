@@ -10,6 +10,16 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddScoped<IEventRepo, EventRepo>();
+builder.Services.AddScoped<ISessionRepo, SessionRepo>();
+builder.Services.AddScoped<IPartnerRepository, PartnerRepositorycs>();
+builder.Services.AddScoped<ISpeakerRepo, SpeakerReposi>();
+builder.Services.AddScoped<ISponsorRepos, SponsorRepo>();
+builder.Services.AddScoped<ISupportRepo, SupportRepo>();
+
+
+
+
+
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
