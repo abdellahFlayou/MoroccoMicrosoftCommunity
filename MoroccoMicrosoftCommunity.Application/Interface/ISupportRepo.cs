@@ -7,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace MoroccoMicrosoftCommunity.Application.Interface
 {
-    public interface ISessionRepo : IGenericRepo<Session>
+    public interface ISupportRepo : IGenericRepo<Support>
     {
-  
         bool Save();
-      
     }
 }

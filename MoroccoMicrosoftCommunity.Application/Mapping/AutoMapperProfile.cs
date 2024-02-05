@@ -14,6 +14,12 @@ namespace MoroccoMicrosoftCommunity.Application.Mapping
         public AutoMapperProfile()
         {
            CreateMap<Evenement , EventDto>().ReverseMap();
+            CreateMap<Session, SessionDto>().ReverseMap();
+            CreateMap<Support , SupportDto>().ReverseMap();
+            CreateMap<Partenaire , PartenaireDto>().ReverseMap();
+            CreateMap<Participant ,ParticipantDto>().ReverseMap();
+            CreateMap<Sponsor ,SponsorDto>().ReverseMap();
+            CreateMap<Speaker ,SpeakerDto>().ReverseMap();
         }
 
     }

@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using MoroccoMicrosoftCommunity.Application.Interface;
+﻿using MoroccoMicrosoftCommunity.Application.Interface;
 using MoroccoMicrosoftCommunity.Domain.Models;
 using MoroccoMicrosoftCommunity.Infrastructure.Data;
 using System;
@@ -10,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace MoroccoMicrosoftCommunity.Infrastructure.Repositories
 {
-    public class EventRepo : GenericRepository<Evenement>, IEventRepo
+    public class SupportRepo : GenericRepository<Support>, ISupportRepo
     {
-        private  readonly AppDBContext _dbContext;
-        public EventRepo(AppDBContext appdbContext) : base(appdbContext)
+        private readonly AppDBContext _dbContext;
+        public SupportRepo(AppDBContext appdbContext) : base(appdbContext)
         {
             _dbContext = appdbContext;
         }

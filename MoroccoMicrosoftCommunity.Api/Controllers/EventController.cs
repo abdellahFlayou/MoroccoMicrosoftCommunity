@@ -33,8 +33,7 @@ namespace MoroccoMicrosoftCommunity.Api.Controllers
         [ProducesResponseType(400)]
         public async Task<IActionResult> GetEventById(int eventId)
         {
-            //if (!_eventRepo.IsExists(eventId))
-            //  return NotFound();
+
             var evenement = _mapper.Map<Evenement>(await _eventRepo.GetById(eventId));
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -77,7 +76,6 @@ namespace MoroccoMicrosoftCommunity.Api.Controllers
                     return NotFound();
                 }
 
-                // Mettez à jour les propriétés de l'événement existant avec celles du DTO
                 _mapper.Map(eventDto, existingEvent);
 
                 await _eventRepo.Update(existingEvent);
@@ -86,34 +84,10 @@ namespace MoroccoMicrosoftCommunity.Api.Controllers
             }
             catch (Exception ex)
             {
-                // Loggez l'exception ou renvoyez une réponse d'erreur appropriée
+               
                 return StatusCode(500, $"Une erreur s'est produite : {ex.Message}");
             }
         }
-
-
-        //[HttpDelete("{eventId}")]
-        //[ProducesResponseType(204)]
-        //[ProducesResponseType(404)]
-        //[ProducesResponseType(400)]
-        //////public async Task<IActionResult> DeleteEvent(int eventId)
-        //////{
-        //////    var eventEntity = await _eventRepo.GetById(eventId);
-
-        //////    if (eventEntity == null)
-        //////    {
-        //////        return NotFound(); // ou renvoyer un autre code d'erreur approprié
-        //////    }
-
-        //////    await _eventRepo.DeleteById(eventId);
-        //////    return NoContent();
-        //////}
-
-        //public async Task<IActionResult> DeleteEvent(int eventId)
-        //{
-        //    var result = await _eventRepo.DeleteById(eventId);
-        //    return Ok(result);
-        //}
 
         [HttpDelete("{eventId}")]
         [ProducesResponseType(204)]
@@ -123,7 +97,7 @@ namespace MoroccoMicrosoftCommunity.Api.Controllers
         {
             try
             {
-                // Vérifier si l'événement existe
+             
                 var eventEntity = await _eventRepo.GetById(eventId);
 
                 if (eventEntity == null)
@@ -131,10 +105,7 @@ namespace MoroccoMicrosoftCommunity.Api.Controllers
                     return NotFound();
                 }
 
-                // Vérifier et supprimer les références dans d'autres tables si nécessaire
-                // Assurez-vous de gérer correctement les contraintes de clé étrangère
-
-                // Supprimer l'événement
+             
                 await _eventRepo.DeleteById(eventId);
 
                 return NoContent();

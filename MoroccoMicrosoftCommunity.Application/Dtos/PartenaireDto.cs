@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace MoroccoMicrosoftCommunity.Application.Dtos
 {
-    public class PratnerDto
-
+    public class PartenaireDto
     {
         public int PartenaireId { get; set; }
 
@@ -15,7 +14,6 @@ namespace MoroccoMicrosoftCommunity.Application.Dtos
 
         public string? Logo { get; set; }
 
-        public int? EvenementId { get; set; }
-
+      
     }
 }

@@ -58,6 +58,7 @@ namespace MoroccoMicrosoftCommunity.Infrastructure.Repositories
             }
             return entity;
         }
+    
 
         public async Task<bool> IsExists(string? key, int? value)
         {
@@ -80,6 +81,10 @@ namespace MoroccoMicrosoftCommunity.Infrastructure.Repositories
             _dbSet.Update(entity);
             await _appdbContext.SaveChangesAsync();
 
+        }
+        public async Task<int> SaveChangesAsync()
+        {
+            return await _appdbContext.SaveChangesAsync();
         }
     }
 }
