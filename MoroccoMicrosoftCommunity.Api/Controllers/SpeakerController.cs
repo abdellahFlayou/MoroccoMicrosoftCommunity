@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Connections;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MoroccoMicrosoftCommunity.Application.Dtos;
@@ -51,5 +52,20 @@ namespace MoroccoMicrosoftCommunity.Api.Controllers
                 return StatusCode(500, "Une erreur interne est survenue lors de la récupération des sessions.");
             }
         }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateSpeaker([FromBody]SpeakerDto speakerDto)
+        {
+            if (speakerDto == null)
+            {
+                return BadRequest("Invalid Data");
+            }
+
+            var speaker = _mapper.Map<Speaker>(speakerDto);
+            var result = await _speakerRepo.Add(speaker);
+            return Ok(result);
+        }
+
+
     }
 }

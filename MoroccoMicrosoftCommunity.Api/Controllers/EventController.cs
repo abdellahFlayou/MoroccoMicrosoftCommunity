@@ -56,6 +56,8 @@ namespace MoroccoMicrosoftCommunity.Api.Controllers
             var resulta = await _eventRepo.Add(eventEntity);
             return Ok(resulta);
         }
+
+
         [HttpPut("{eventId}")]
         [ProducesResponseType(204)]
         [ProducesResponseType(404)]
