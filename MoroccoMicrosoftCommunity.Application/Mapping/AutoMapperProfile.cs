@@ -15,7 +15,7 @@ namespace MoroccoMicrosoftCommunity.Application.Mapping
         {
            CreateMap<Evenement , EventDto>().ReverseMap();
             CreateMap<SessionDto, Session>()
-     .ForMember(dest => dest.Image, opt => opt.MapFrom(src => Convert.FromBase64String(src.Image)))
+     //.ForMember(dest => dest.Image, opt => opt.MapFrom(src => Convert.FromBase64String(src.Image)))
      .ReverseMap();
 
             CreateMap<Support , SupportDto>().ReverseMap();
