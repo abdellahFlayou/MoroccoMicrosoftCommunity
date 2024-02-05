@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using MoroccoMicrosoftCommunity.Application.Interface;
-using MoroccoMicrosoftCommunity.Application.Mapping;
 using MoroccoMicrosoftCommunity.Infrastructure.Data;
 using MoroccoMicrosoftCommunity.Infrastructure.Repositories;
 

@@ -2,10 +2,6 @@
 using MoroccoMicrosoftCommunity.Application.Interface;
 using MoroccoMicrosoftCommunity.Domain.Models;
 using MoroccoMicrosoftCommunity.Infrastructure.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace MoroccoMicrosoftCommunity.Infrastructure.Repositories
@@ -17,11 +13,23 @@ namespace MoroccoMicrosoftCommunity.Infrastructure.Repositories
         {
             _dbContext = appdbContext;
         }
+
         public bool Save()
         {
             var saved = _dbContext.SaveChanges();
-            return saved > 0 ? true : false;
+            return saved > 0;
         }
+
+        public async Task<Speaker> GetById(int? speakerId)
+        {
+            if (speakerId == null)
+            {
+                return null;
+            }
+
+            return await _dbContext.Speakers.FindAsync(speakerId);
+        }
+
         public async Task<Speaker> AddOrUpdateSpeaker(Speaker speaker)
         {
             var existingSpeaker = await _dbContext.Speakers.FindAsync(speaker.SpeakerId);

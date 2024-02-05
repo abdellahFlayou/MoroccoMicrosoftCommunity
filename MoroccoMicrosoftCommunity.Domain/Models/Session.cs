@@ -15,7 +15,8 @@ public partial class Session
 
     public string? Adresse { get; set; }
 
-    public byte[]? Image { get; set; }
+    public string? Image { get; set; }
+    //public byte[]? Image { get; set; }
 
     public int? EvenementId { get; set; }
 
@@ -32,5 +33,4 @@ public partial class Session
     public virtual ICollection<Sponsor> Sponsors { get; set; } = new List<Sponsor>();
 
     public virtual Utilisateur? Utilisateur { get; set; }
-   
 }
