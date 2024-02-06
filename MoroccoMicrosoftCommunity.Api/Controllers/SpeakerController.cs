@@ -47,25 +47,81 @@ namespace MoroccoMicrosoftCommunity.Api.Controllers
                 var speakerDto = _mapper.Map<SpeakerDto>(speaker);
                 return Ok(speakerDto);
             }
-            catch(Exception ex ) {
+            catch (Exception ex)
+            {
                 Console.WriteLine($"Erreur lors de la récupération des sessions : {ex.ToString()}");
                 return StatusCode(500, "Une erreur interne est survenue lors de la récupération des sessions.");
             }
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateSpeaker([FromBody]SpeakerDto speakerDto)
+        public async Task<IActionResult> CreateSpeaker([FromBody] SpeakerDto speakerDto)
         {
-            if (speakerDto == null)
+            try
             {
-                return BadRequest("Invalid Data");
-            }
+                if (speakerDto == null)
+                {
+                    return BadRequest("Invalid Data");
+                }
 
-            var speaker = _mapper.Map<Speaker>(speakerDto);
-            var result = await _speakerRepo.Add(speaker);
-            return Ok(result);
+                var speaker = _mapper.Map<Speaker>(speakerDto);
+                var result = await _speakerRepo.Add(speaker);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Erreur lors de la récupération des  : {ex.Message}");
+                return StatusCode(500, "Une erreur interne est survenue lors de la récupération des sessions.");
+            }
         }
 
+        [HttpPut("{speakerId}")]
+        public async Task<IActionResult> UpdateSpeaker(int speakerId, [FromBody] SpeakerDto speakerDto)
+        {
+            try
+            {
+
+                if (speakerDto == null || speakerId != speakerDto.SpeakerId)
+                {
+                    return NotFound();
+                }
+
+                var existingSpeaker = await _speakerRepo.GetById(speakerId);
+
+                if (existingSpeaker == null)
+                {
+                    return NotFound();
+                }
+
+                _mapper.Map(speakerDto, existingSpeaker);
+                await _speakerRepo.Update(existingSpeaker);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Erreur lors de la récupération des sessions : {ex.Message}");
+                return StatusCode(500, "Une erreur interne est survenue lors de la récupération des sessions.");
+            }
+        }
+
+        [HttpDelete("{speakerId}")]
+        public async Task<IActionResult> DeleteSpeaker(int speakerId)
+        {
+            try {
+                var speakerToDelete = await _speakerRepo.GetById(speakerId);
+                if (speakerToDelete==null)
+                {
+                    return NotFound();
+                }
+
+                await _speakerRepo.DeleteById(speakerId);
+                return Ok($"Speaker with id {speakerId} deleted successfully");
+            }
+            catch(Exception ex) {
+                Console.WriteLine($"Erreur lors de la récupération des sessions : {ex.Message}");
+                return StatusCode(500, "Une erreur interne est survenue lors de la récupération des sessions.");
+            }
+        }
 
     }
 }

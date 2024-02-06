@@ -19,14 +19,14 @@ namespace MoroccoMicrosoftCommunity.Application.Dtos
 
         public string? Adresse { get; set; }
 
-        public byte[]? Image { get; set; }
+        public string? Photo { get; set; }
 
         public int? EvenementId { get; set; }
 
         public int? UtilisateurId { get; set; }
 
         public int? SpeakerId { get; set; }
-                public SpeakerDto Speaker { get; set; }
+                //public SpeakerDto Speaker { get; set; }
 
     }
 }

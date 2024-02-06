@@ -15,7 +15,7 @@ public partial class Session
 
     public string? Adresse { get; set; }
 
-    public byte[]? Image { get; set; }
+    public string? Photo { get; set; }
 
     public int? EvenementId { get; set; }
 

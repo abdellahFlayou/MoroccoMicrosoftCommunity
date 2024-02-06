@@ -11,7 +11,7 @@ public partial class Speaker
 
     public string? Prenom { get; set; }
 
-    public byte[]? Image { get; set; }
+    public string? Photo { get; set; }
 
     public bool? Mct { get; set; }
 

@@ -12,7 +12,7 @@ namespace MoroccoMicrosoftCommunity.Application.Dtos
 
         public string? Titre { get; set; }
 
-        public byte[]? Image { get; set; }
+        public string? Photo { get; set; }
 
         public string? Description { get; set; }
 

@@ -23,10 +23,12 @@ namespace MoroccoMicrosoftCommunity.Api.Controllers
         [ProducesResponseType(200, Type = typeof(IEnumerable<Evenement>))]
         public async Task<IActionResult> GetEvent()
         {
-            var evenements = _mapper.Map<List<EventDto>>(await _eventRepo.GetAllAsync());
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-            return Ok(evenements);
+            var evenements = await _eventRepo.GetAllAsync();
+            if(!evenements.Any()) { 
+                return NotFound();
+            }
+            var evenementsDto = _mapper.Map<List<EventDto>>(evenements);
+            return Ok(evenementsDto);
         }
 
         [HttpGet("{eventId}")]
