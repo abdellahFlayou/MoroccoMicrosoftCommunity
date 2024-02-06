@@ -23,9 +23,9 @@ namespace MoroccoMicrosoftCommunity.Application.Dtos
 
         public int? EvenementId { get; set; }
 
-        public int? UtilisateurId { get; set; }
+        //public int? UtilisateurId { get; set; }
 
-        public int? SpeakerId { get; set; }
+      //  public int? SpeakerId { get; set; }
 
         // public SpeakerDto Speaker { get; set; }
     }

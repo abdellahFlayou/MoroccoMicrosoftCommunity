@@ -44,7 +44,7 @@ public partial class AppDBContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=DESKTOP-BAJFKVA;Database=EvenementMoroccoMicrosoftCommunity;Trusted_Connection=True;TrustServerCertificate=True;");
+        => optionsBuilder.UseSqlServer("Server=DESKTOP-BAJFKVA;Database=MoroccoMicrosoftCommunityUP2;Trusted_Connection=True;TrustServerCertificate=True;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -54,15 +54,15 @@ public partial class AppDBContext : DbContext
 
             entity.ToTable("Evenement");
 
-            entity.Property(e => e.EvenementId)
-                .ValueGeneratedNever()
-                .HasColumnName("EvenementID");
-            entity.Property(e => e.DateDebut).HasColumnType("datetime");
-            entity.Property(e => e.DateFin).HasColumnType("datetime");
-            entity.Property(e => e.Description).HasColumnType("text");
-            entity.Property(e => e.Titre)
-                .HasMaxLength(100)
-                .IsUnicode(false);
+            //entity.Property(e => e.EvenementId)
+            //    .ValueGeneratedNever()
+            //    .HasColumnName("EvenementID");
+            //entity.Property(e => e.DateDebut).HasColumnType("datetime");
+            //entity.Property(e => e.DateFin).HasColumnType("datetime");
+            //entity.Property(e => e.Description).HasColumnType("text");
+            //entity.Property(e => e.Titre)
+            //    .HasMaxLength(100)
+            //    .IsUnicode(false);
         });
 
         modelBuilder.Entity<Partenaire>(entity =>
@@ -71,20 +71,20 @@ public partial class AppDBContext : DbContext
 
             entity.ToTable("Partenaire");
 
-            entity.Property(e => e.PartenaireId)
-                .ValueGeneratedNever()
-                .HasColumnName("PartenaireID");
-            entity.Property(e => e.EvenementId).HasColumnName("EvenementID");
-            entity.Property(e => e.Logo)
-                .HasMaxLength(255)
-                .IsUnicode(false);
-            entity.Property(e => e.Nom)
-                .HasMaxLength(100)
-                .IsUnicode(false);
+            //entity.Property(e => e.PartenaireId)
+            //    .ValueGeneratedNever()
+            //    .HasColumnName("PartenaireID");
+            //entity.Property(e => e.EvenementId).HasColumnName("EvenementID");
+            //entity.Property(e => e.Logo)
+            //    .HasMaxLength(255)
+            //    .IsUnicode(false);
+            //entity.Property(e => e.Nom)
+            //    .HasMaxLength(100)
+            //    .IsUnicode(false);
 
-            entity.HasOne(d => d.Evenement).WithMany(p => p.Partenaires)
-                .HasForeignKey(d => d.EvenementId)
-                .HasConstraintName("FK__Partenair__Evene__46E78A0C");
+            //entity.HasOne(d => d.Evenement).WithMany(p => p.Partenaires)
+            //    .HasForeignKey(d => d.EvenementId)
+            //    .HasConstraintName("FK__Partenair__Evene__46E78A0C");
         });
 
         modelBuilder.Entity<PartenaireEvenement>(entity =>
@@ -159,32 +159,34 @@ public partial class AppDBContext : DbContext
                 .HasColumnName("dateSession");
             entity.Property(e => e.Description).HasColumnType("text");
             entity.Property(e => e.EvenementId).HasColumnName("EvenementID");
-            entity.Property(e => e.SpeakerId).HasColumnName("SpeakerID");
+            //entity.Property(e => e.SpeakerId).HasColumnName("SpeakerID");
             entity.Property(e => e.TitreSession)
                 .HasMaxLength(100)
                 .IsUnicode(false);
-            entity.Property(e => e.UtilisateurId).HasColumnName("UtilisateurID");
+            //entity.Property(e => e.UtilisateurId).HasColumnName("UtilisateurID");
 
             entity.HasOne(d => d.Evenement).WithMany(p => p.Sessions)
                 .HasForeignKey(d => d.EvenementId)
                 .HasConstraintName("FK__Session__Eveneme__403A8C7D");
 
-            entity.HasOne(d => d.Speaker).WithMany(p => p.Sessions)
-                .HasForeignKey(d => d.SpeakerId)
-                .HasConstraintName("FK__Session__Speaker__3F466844");
+            //entity.HasOne(d => d.Speaker).WithMany(p => p.Sessions)
+            //    .HasForeignKey(d => d.SpeakerId)
+            //    .HasConstraintName("FK__Session__Speaker__3F466844");
 
-            entity.HasOne(d => d.Utilisateur).WithMany(p => p.Sessions)
-                .HasForeignKey(d => d.UtilisateurId)
-                .HasConstraintName("FK__Session__Utilisa__412EB0B6");
+            //entity.HasOne(d => d.Utilisateur).WithMany(p => p.Sessions)
+            //    .HasForeignKey(d => d.UtilisateurId)
+            //    .HasConstraintName("FK__Session__Utilisa__412EB0B6");
         });
 
         modelBuilder.Entity<Speaker>(entity =>
         {
-            entity.HasKey(e => e.SpeakerId).HasName("PK__Speakers__79E75739178045D2");
+            entity.HasKey(e => e.SpeakerId);
+            //.HasName("PK__Speakers__79E75739178045D2");
 
             entity.Property(e => e.SpeakerId)
-                .ValueGeneratedNever()
-                .HasColumnName("SpeakerID");
+            .ValueGeneratedOnAdd();
+                //.ValueGeneratedNever()
+               // .HasColumnName("SpeakerID");
             entity.Property(e => e.Biography).HasColumnType("text");
             entity.Property(e => e.LienFacebook)
                 .HasMaxLength(255)

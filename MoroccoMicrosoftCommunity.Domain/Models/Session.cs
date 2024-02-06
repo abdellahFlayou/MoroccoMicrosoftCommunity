@@ -20,17 +20,17 @@ public partial class Session
 
     public int? EvenementId { get; set; }
 
-    public int? UtilisateurId { get; set; }
+    //public int? UtilisateurId { get; set; }
 
-    public int? SpeakerId { get; set; }
+    //public int? SpeakerId { get; set; }
 
     public virtual Evenement? Evenement { get; set; }
 
-    public virtual Speaker? Speaker { get; set; }
+    //public virtual Speaker? Speaker { get; set; }
 
     public virtual ICollection<SponsorSession> SponsorSessions { get; set; } = new List<SponsorSession>();
 
     public virtual ICollection<Sponsor> Sponsors { get; set; } = new List<Sponsor>();
 
-    public virtual Utilisateur? Utilisateur { get; set; }
+   // public virtual Utilisateur? Utilisateur { get; set; }
 }

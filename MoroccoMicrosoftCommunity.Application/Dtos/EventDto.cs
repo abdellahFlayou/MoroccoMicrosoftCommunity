@@ -8,7 +8,7 @@ namespace MoroccoMicrosoftCommunity.Application.Dtos
 {
     public class EventDto
     {
-        public int EvenementId { get; set; }
+        public int? EvenementId { get; set; }
 
         public string? Titre { get; set; }
 

@@ -14,7 +14,17 @@ builder.Services.AddScoped<IPartnerRepository, PartnerRepositorycs>();
 builder.Services.AddScoped<ISpeakerRepo, SpeakerReposi>();
 builder.Services.AddScoped<ISponsorRepos, SponsorRepo>();
 builder.Services.AddScoped<ISupportRepo, SupportRepo>();
-
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins",
+        builder =>
+        {
+            builder
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+        });
+});
 
 
 
@@ -38,6 +48,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors("AllowAllOrigins");
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

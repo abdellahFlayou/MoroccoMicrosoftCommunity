@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MoroccoMicrosoftCommunity.Domain.Models;
 
 public partial class Evenement
 {
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int EvenementId { get; set; }
 
     public string? Titre { get; set; }

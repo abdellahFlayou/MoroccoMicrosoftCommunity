@@ -23,7 +23,7 @@ public partial class Utilisateur
 
     public virtual ICollection<Participant> Participants { get; set; } = new List<Participant>();
 
-    public virtual ICollection<Session> Sessions { get; set; } = new List<Session>();
+    //public virtual ICollection<Session> Sessions { get; set; } = new List<Session>();
 
     public virtual ICollection<Speaker> Speakers { get; set; } = new List<Speaker>();
 }

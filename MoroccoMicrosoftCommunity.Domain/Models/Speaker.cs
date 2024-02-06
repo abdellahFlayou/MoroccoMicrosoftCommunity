@@ -31,7 +31,7 @@ public partial class Speaker
 
     public int? UtilisateurId { get; set; }
 
-    public virtual ICollection<Session> Sessions { get; set; } = new List<Session>();
+   // public virtual ICollection<Session> Sessions { get; set; } = new List<Session>();
 
     public virtual Utilisateur? Utilisateur { get; set; }
 }

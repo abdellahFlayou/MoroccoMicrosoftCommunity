@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using MoroccoMicrosoftCommunity.Application.Dtos;
 using MoroccoMicrosoftCommunity.Application.Interface;
 using MoroccoMicrosoftCommunity.Domain.Models;
@@ -40,22 +41,67 @@ namespace MoroccoMicrosoftCommunity.Api.Controllers
             return Ok(evenement);
 
         }
-        [HttpPost, DisableRequestSizeLimit]
-        [ProducesResponseType(204)]
+        //[HttpPost, DisableRequestSizeLimit]
+        //[ProducesResponseType(204)]
+        //[ProducesResponseType(400)]
+        //public async Task<IActionResult> CreateEvent([FromBody] EventDto eventDto)
+        //{
+
+        //    if (!ModelState.IsValid)
+        //        return BadRequest(ModelState);
+
+        //    if (eventDto == null)
+        //        return BadRequest("Invalid data");
+
+        //    var eventEntity = _mapper.Map<Evenement>(eventDto);
+        //    var resulta = await _eventRepo.Add(eventEntity);
+        //    return Ok(resulta);
+        //}
+        //        [HttpPost, DisableRequestSizeLimit]
+        //[ProducesResponseType(204)]
+        //[ProducesResponseType(400)]
+        //public async Task<IActionResult> CreateEvent([FromBody] EventDto eventDto)
+        //{
+        //    if (!ModelState.IsValid)
+        //        return BadRequest(ModelState);
+
+        //    if (eventDto == null)
+        //        return BadRequest("Invalid data");
+
+        //    // Assurez-vous que EvenementId est null dans le DTO
+        //    eventDto.EvenementId = null;
+
+        //    var eventEntity = _mapper.Map<Evenement>(eventDto);
+        //    var result = await _eventRepo.Add(eventEntity);
+
+        //    return Ok(result);
+        //}
+        [HttpPost]
+        [ProducesResponseType(201)]
         [ProducesResponseType(400)]
         public async Task<IActionResult> CreateEvent([FromBody] EventDto eventDto)
         {
-
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
             if (eventDto == null)
                 return BadRequest("Invalid data");
 
+            // Mapper le DTO vers l'entité Evenement
             var eventEntity = _mapper.Map<Evenement>(eventDto);
-            var resulta = await _eventRepo.Add(eventEntity);
-            return Ok(resulta);
+
+            // Ne pas fournir de valeur pour EvenementId
+            // car c'est une colonne d'identité gérée automatiquement par la base de données
+
+            // Ajouter l'événement à la base de données
+            await _eventRepo.Add(eventEntity);
+
+            // Retourner une réponse avec le code de statut 201 (Created)
+            // et inclure le nouvel événement dans le corps de la réponse
+            return CreatedAtAction(nameof(GetEvent), new { id = eventEntity.EvenementId }, eventEntity);
         }
+
+
         [HttpPut("{eventId}")]
         [ProducesResponseType(204)]
         [ProducesResponseType(404)]
@@ -89,6 +135,33 @@ namespace MoroccoMicrosoftCommunity.Api.Controllers
             }
         }
 
+        //[HttpDelete("{eventId}")]
+        //[ProducesResponseType(204)]
+        //[ProducesResponseType(404)]
+        //[ProducesResponseType(400)]
+        //public async Task<IActionResult> DeleteEvent(int eventId)
+        //{
+        //    try
+        //    {
+
+        //        var eventEntity = await _eventRepo.GetById(eventId);
+
+        //        if (eventEntity == null)
+        //        {
+        //            return NotFound();
+        //        }
+
+
+        //        await _eventRepo.DeleteById(eventId);
+
+        //        return NoContent();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return StatusCode(500, $"Une erreur s'est produite : {ex.Message}");
+        //    }
+        //}
+        // Endpoint pour supprimer un événement
         [HttpDelete("{eventId}")]
         [ProducesResponseType(204)]
         [ProducesResponseType(404)]
@@ -97,7 +170,7 @@ namespace MoroccoMicrosoftCommunity.Api.Controllers
         {
             try
             {
-             
+
                 var eventEntity = await _eventRepo.GetById(eventId);
 
                 if (eventEntity == null)
@@ -105,7 +178,7 @@ namespace MoroccoMicrosoftCommunity.Api.Controllers
                     return NotFound();
                 }
 
-             
+
                 await _eventRepo.DeleteById(eventId);
 
                 return NoContent();
@@ -116,7 +189,6 @@ namespace MoroccoMicrosoftCommunity.Api.Controllers
                 return StatusCode(500, "Une erreur interne est survenue lors de la suppression.");
             }
         }
-
 
     }
 }

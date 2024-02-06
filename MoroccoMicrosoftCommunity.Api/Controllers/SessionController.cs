@@ -33,22 +33,26 @@ namespace MoroccoMicrosoftCommunity.Api.Controllers
         [ProducesResponseType(500)]
         public async Task<IActionResult> GetSessions()
         {
-            try
-            {
-                var sessions = await _sessionRepo.GetAllAsync();
-                if (sessions == null || !sessions.Any())
-                {
-                    return NotFound("Aucune session trouvée.");
-                }
+            //  try
+            //{
+            //var sessions = await _sessionRepo.GetAllAsync();
+            //if (sessions == null || !sessions.Any())
+            //{
+            //    return NotFound("Aucune session trouvée.");
+            //}
 
-                var sessionDtos = _mapper.Map<List<SessionDto>>(sessions);
-                return Ok(sessionDtos);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Erreur lors de la récupération des sessions : {ex}");
-                return StatusCode(500, "Une erreur interne est survenue lors de la récupération des sessions.");
-            }
+            //var sessionDtos = _mapper.Map<List<SessionDto>>(sessions);
+            //return Ok(sessionDtos);
+            //}
+            //catch (Exception ex)
+            //{
+            //  _logger.LogError($"Erreur lors de la récupération des sessions : {ex}");
+            // return StatusCode(500, "Une erreur interne est survenue lors de la récupération des sessions.");
+            //}
+            var session = _mapper.Map<List<SessionDto>>(await _sessionRepo.GetAllAsync());
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            return Ok(session);
         }
 
         [HttpGet("{sessionId}")]
@@ -74,57 +78,74 @@ namespace MoroccoMicrosoftCommunity.Api.Controllers
         }
 
         [HttpPost]
-        [ProducesResponseType(201, Type = typeof(SessionDto))]
-        [ProducesResponseType(400)]
-        [ProducesResponseType(500)]
+        //[ProducesResponseType(201, Type = typeof(SessionDto))]
+        //[ProducesResponseType(400)]
+        //[ProducesResponseType(500)]
         public async Task<IActionResult> CreateSession([FromBody] SessionDto sessionDto)
         {
+            //try
+            //{
+            //    if (!ModelState.IsValid)
+            //    {
+            //        return BadRequest(ModelState);
+            //    }
+
+            //    //var existingSpeaker = await _speakerRepo.GetById(sessionDto.SpeakerId);
+            //    //if (existingSpeaker == null)
+            //    //{
+            //    //    throw new Exception("Le conférencier spécifié n'existe pas.");
+            //    //}
+
+            //    // Map SessionDto to Session entity
+            //    var sessionEntity = _mapper.Map<Session>(sessionDto);
+
+            //    // Convert Base64-encoded string to byte[]
+            //    //sessionEntity.Image = Convert.FromBase64String(sessionDto.Image);
+
+            //    // Assign the existing speaker
+            //    //sessionEntity.SpeakerId = existingSpeaker.SpeakerId;
+
+            //    await _sessionRepo.Add(sessionEntity);
+
+            //    if (_sessionRepo.Save())
+            //    {
+            //        var createdSessionDto = _mapper.Map<SessionDto>(sessionEntity);
+            //        return CreatedAtAction(nameof(GetSessionById), new { sessionId = createdSessionDto.SessionId }, createdSessionDto);
+            //    }
+            //    else
+            //    {
+            //        return StatusCode(500, "Erreur lors de la création de la session.");
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    // Gérer l'exception
+            //    _logger.LogError($"Erreur lors de la création de la session : {ex}");
+
+            //    if (ex.InnerException != null)
+            //    {
+            //        _logger.LogError($"Inner Exception: {ex.InnerException.Message}");
+            //    }
+
+            //    return StatusCode(500, $"Erreur interne du serveur : {ex.Message}");
+            //}
             try
             {
-                if (!ModelState.IsValid)
-                {
-                    return BadRequest(ModelState);
-                }
-
-                var existingSpeaker = await _speakerRepo.GetById(sessionDto.SpeakerId);
-                if (existingSpeaker == null)
-                {
-                    throw new Exception("Le conférencier spécifié n'existe pas.");
-                }
-
-                // Map SessionDto to Session entity
-                var sessionEntity = _mapper.Map<Session>(sessionDto);
-
-                // Convert Base64-encoded string to byte[]
-                //sessionEntity.Image = Convert.FromBase64String(sessionDto.Image);
-
-                // Assign the existing speaker
-                sessionEntity.SpeakerId = existingSpeaker.SpeakerId;
-
-                await _sessionRepo.Add(sessionEntity);
-
-                if (_sessionRepo.Save())
-                {
-                    var createdSessionDto = _mapper.Map<SessionDto>(sessionEntity);
-                    return CreatedAtAction(nameof(GetSessionById), new { sessionId = createdSessionDto.SessionId }, createdSessionDto);
-                }
-                else
-                {
-                    return StatusCode(500, "Erreur lors de la création de la session.");
-                }
+                //if(SessionDto == null)
+                //{
+                //    return BadRequest("Invalid Data");
+                //}
+                var session = _mapper.Map<Session>(sessionDto);
+                var result = await _sessionRepo.Add(session);
+                return Ok(result);
             }
             catch (Exception ex)
             {
-                // Gérer l'exception
-                _logger.LogError($"Erreur lors de la création de la session : {ex}");
-
-                if (ex.InnerException != null)
-                {
-                    _logger.LogError($"Inner Exception: {ex.InnerException.Message}");
-                }
-
+                Console.WriteLine($"Erreur lors de la récupération des  : {ex.Message}");
                 return StatusCode(500, $"Erreur interne du serveur : {ex.Message}");
             }
+
+
         }
 
         [HttpPut("{sessionId}")]
