@@ -19,8 +19,7 @@ namespace MoroccoMicrosoftCommunity.Application.Dtos
 
         public string? Adresse { get; set; }
 
-        //public byte[]? Image { get; set; }
-        public string? Image { get; set; } // Modifier le type de byte[] à string
+        public string? Photo { get; set; } // Modifier le type de byte[] à string
 
         public int? EvenementId { get; set; }
 
